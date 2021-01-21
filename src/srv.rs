@@ -56,7 +56,7 @@ impl SrvResolver {
 
         let mut srv_addresses: Vec<_> = self
             .resolver
-            .srv_lookup(&lookup_hostname)?
+            .srv_lookup(lookup_hostname)?
             .iter()
             .map(|record| {
                 let hostname = record.target().to_utf8();
